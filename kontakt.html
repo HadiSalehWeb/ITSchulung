@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Hadi Saleh">
+    <meta name="description" content="Hadi Salehs UML Schulung Priesinformation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hadi Salehs UML-Schulung Priesunformation</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Priesinformation.</h1>
+        <p>Wir haben mehrere möglichkeiten für Schüler mit unterschiedlichen Einkommen.</p>
+    </header>
+    <nav>
+        <h2>Navigation.</h2>
+        <ul>
+            <li><a href="index.html">Startseite.</a></li>
+            <li><a href="leistungen.html">Leistungen.</a></li>
+            <li><a href="pries.html">Preisinformation.</a></li>
+            <li><a href="impressum.html">Impressum.</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="error.html" method="post">
+            <fieldset>
+                <legend>Persönlich Daten.</legend>
+                <p>
+                    <label>Anrede</label><br>
+                    <label>
+                        <input type="radio" name="anrede" value="herr">
+                        Herr
+                    </label>
+                    <label>
+                        <input type="radio" name="anrede" value="frau">
+                        Frau
+                    </label>
+                    <label>
+                        <input type="radio" name="anrede" value="keineAngabe" checked>
+                        Keine Angabe
+                    </label>
+                </p>
+                <p>
+                    <label for="vorname">Vorname*</label><br>
+                    <input type="text" id="vorname" name="vorname" required>
+                </p>
+                <p>
+                    <label for="nachname">Nachname*</label><br>
+                    <input type="text" id="nachname" name="nachname" required>
+                </p>
+                <p>
+                    <label for="firma">Firma*</label><br>
+                    <input type="text" id="firma" name="firma" required>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Kontaktdaten.</legend>
+                <p>
+                    <label for="email">Email*</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="telefon">Telefonnummer</label><br>
+                    <input type="tel" id="telefon" name="telefon">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Seminar.</legend>
+                <p>
+                    <label for="seminar">Wählen Sie einen Seminar aus:*</label>
+                    <select id="seminar" name="seminar">
+                        <option value="seminar1">Seminar 1</option>
+                        <option value="seminar2">Seminar 2</option>
+                        <option value="seminar3">Seminar 3</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="termin">Wunschtermin*</label><br>
+                    <input type="date" id="termin" name="termin" required>
+                </p>
+                <p>
+                    <label for="inhouse-training">
+                        <input type="checkbox" id="inhouse-training" name="inhouse-training">
+                        Inhouse-Training
+                    </label>
+                </p>
+                <p>
+                    <label for="anzahl">Anzahl der Teilnehmer (1-20)</label><br>
+                    <input type="number" id="anzahl" name="anzahl" min="1" step="1" max="20" disabled>
+                </p>
+            </fieldset>
+
+            <p>
+                <label for="kommentar">Weitere Kommentare:</label><br>
+                <textarea id="kommentar" name="kommentar" rows="5" cols="33"></textarea>
+            </p>
+
+            <p>
+                <label for="datenspeicherung">
+                    <input type="checkbox" id="datenspeicherung" name="datenspeicherung" required>
+                    Zustimmung zur Datenspeicherung.*
+                </label>
+            </p>
+
+            <button type="submit">Submit</button>
+
+            <p>*: Erforderliches Feld.</p>
+        </form>
+    </main>
+    <footer>
+        <p>Made by Hadi Saleh.</p>
+        <p>Hosted on Github.com</p>
+    </footer>
+</body>
+
+</html>
