@@ -42,58 +42,61 @@
             </ul>
         </div>
     </nav>
+
     <header class="container">
         <h1>Kontakt.</h1>
     </header>
+
     <main class="container">
         <form action="error.html" method="post">
-            <fieldset>
+            <fieldset class="form-group">
                 <legend>Persönlich Daten.</legend>
                 <p>
                     <label>Anrede</label><br>
-                    <label>
-                        <input type="radio" name="anrede" value="herr">
-                        Herr
-                    </label>
-                    <label>
-                        <input type="radio" name="anrede" value="frau">
-                        Frau
-                    </label>
-                    <label>
-                        <input type="radio" name="anrede" value="keineAngabe" checked>
-                        Keine Angabe
-                    </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="anrede" id="anrede-herr" value="herr">
+                        <label class="form-check-label" for="anrede-herr">Herr</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="anrede" id="anrede-frau" value="frau">
+                        <label class="form-check-label" for="anrede-frau">Frau</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="anrede" id="anrede-keineAngabe"
+                            value="keineAngabe">
+                        <label class="form-check-label" for="anrede-keineAngabe">Keine Angabe</label>
+                    </div>
                 </p>
                 <p>
                     <label for="vorname">Vorname*</label><br>
-                    <input type="text" id="vorname" name="vorname" required>
+                    <input class="form-control" type="text" id="vorname" name="vorname" required>
                 </p>
                 <p>
                     <label for="nachname">Nachname*</label><br>
-                    <input type="text" id="nachname" name="nachname" required>
+                    <input class="form-control" type="text" id="nachname" name="nachname" required>
                 </p>
                 <p>
                     <label for="firma">Firma*</label><br>
-                    <input type="text" id="firma" name="firma" required>
+                    <input class="form-control" type="text" id="firma" name="firma" required>
                 </p>
             </fieldset>
-            <fieldset>
+            <fieldset class="form-group">
                 <legend>Kontaktdaten.</legend>
                 <p>
                     <label for="email">Email*</label><br>
-                    <input type="email" id="email" name="email" required>
+                    <input class="form-control" type="email" id="email" name="email" required>
                 </p>
                 <p>
                     <label for="telefon">Telefonnummer</label><br>
-                    <input type="tel" id="telefon" name="telefon">
+                    <input class="form-control" type="tel" id="telefon" name="telefon">
                 </p>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="form-group">
                 <legend>Seminar.</legend>
                 <p>
                     <label for="seminar">Wählen Sie einen Seminar aus:*</label>
-                    <select id="seminar" name="seminar">
+                    <select class="custom-select" id="seminar" name="seminar">
                         <option value="seminar1">Seminar 1</option>
                         <option value="seminar2">Seminar 2</option>
                         <option value="seminar3">Seminar 3</option>
@@ -101,23 +104,26 @@
                 </p>
                 <p>
                     <label for="termin">Wunschtermin*</label><br>
-                    <input type="date" id="termin" name="termin" required>
+                    <input class="form-control" type="date" id="termin" name="termin" required>
                 </p>
+
                 <p>
                     <label for="inhouse-training">
                         <input type="checkbox" id="inhouse-training" name="inhouse-training">
                         Inhouse-Training
                     </label>
                 </p>
+
                 <p>
                     <label for="anzahl">Anzahl der Teilnehmer (1-20)</label><br>
-                    <input type="number" id="anzahl" name="anzahl" min="1" step="1" max="20" disabled>
+                    <input class="form-control" type="number" id="anzahl" name="anzahl" min="1" step="1" max="20"
+                        disabled>
                 </p>
             </fieldset>
 
             <p>
                 <label for="kommentar">Weitere Kommentare:</label><br>
-                <textarea id="kommentar" name="kommentar" rows="5" cols="33"></textarea>
+                <textarea class="form-control" id="kommentar" name="kommentar" rows="5" cols="33"></textarea>
             </p>
 
             <p>
@@ -127,11 +133,12 @@
                 </label>
             </p>
 
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
 
             <p>*: Erforderliches Feld.</p>
         </form>
     </main>
+
     <footer class="container">
         <p>Made by Musterteamname3.</p>
         <p>Hosted on <a href="https://github.com/HadiSalehWeb/ITSchulung" target="_blank">Github.com</a></p>
